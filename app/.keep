@@ -1,0 +1,3 @@
+layout.tsx  →  app/layout.tsx
+page.tsx    →  app/page.tsx
+route.ts    →  app/api/plan/generate/route.ts
