@@ -20,7 +20,7 @@ body {
 .container {
   @apply mx-auto max-w-6xl px-4;
 }
-.card { @apply bg-white border border-slate-200 rounded-2xl p-6 shadow-lg; 
+.card { @apply bg-white border border-slate-200 rounded-2xl p-6 shadow-md; 
 }
 
 .btn {
