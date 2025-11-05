@@ -16,19 +16,20 @@ body {
   color: var(--fg);
 }
 
-/* малко helper-и */
-.container {
-  @apply mx-auto max-w-6xl px-4;
-}
-.card { @apply bg-white border border-slate-200 rounded-2xl p-6 shadow-md; 
-}
+/* helper-и */
+.container { @apply mx-auto max-w-6xl px-4; }
+
+.card { @apply bg-white border border-slate-200 rounded-2xl p-6 shadow-md; }
 
 .btn {
-  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold border;
+  @apply inline-flex items-center gap-2 rounded-2xl px-4 py-2 font-semibold border;
 }
+
+/* използваме стандартни Tailwind цветове */
 .btn-primary {
-  @apply bg-brand text-white border-brand hover:bg-brand-dark hover:border-brand-dark;
+  @apply bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 hover:border-emerald-700;
 }
+
 .btn-ghost {
   @apply bg-white text-slate-700 border-slate-200 hover:bg-slate-50;
 }
