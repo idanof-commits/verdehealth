@@ -3,7 +3,7 @@ export const metadata = {
   description: "Персонализирани хранителни режими и проследяване",
 };
 
-import "./globals.css";
+import "./global.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
