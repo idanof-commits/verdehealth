@@ -3,23 +3,34 @@ export const metadata = {
   description: "Персонализирани хранителни режими и проследяване",
 };
 
+import "./globals.css";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="bg">
-      <body style={{ margin: 0, background: "#FAFAF5", color: "#111" }}>
-        <header style={{ padding: "12px 16px", background: "#0f172a", color: "#fff" }}>
-          <div style={{ maxWidth: 1040, margin: "0 auto", display: "flex", gap: 16, alignItems: "center" }}>
-            <a href="/" style={{ color: "#fff", textDecoration: "none", fontWeight: 800 }}>VERDE HEALTH</a>
-            <nav style={{ display: "flex", gap: 12 }}>
-              <a href="/intake" style={{ color: "#cbd5e1" }}>Въпросник</a>
-              <a href="/legal/privacy" style={{ color: "#cbd5e1" }}>Политика</a>
-              <a href="/legal/terms" style={{ color: "#cbd5e1" }}>Условия</a>
+      <body>
+        <header className="bg-slate-900 text-white">
+          <div className="container flex items-center gap-6 py-3">
+            <a href="/" className="font-extrabold tracking-wide">VERDE HEALTH</a>
+            <nav className="flex gap-4 text-slate-300">
+              <a href="/intake" className="hover:text-white">Въпросник</a>
+              <a href="/legal/privacy" className="hover:text-white">Политика</a>
+              <a href="/legal/terms" className="hover:text-white">Условия</a>
             </nav>
           </div>
         </header>
+
         {children}
-        <footer style={{ padding: "24px 16px", color: "#475569" }}>
-          <div style={{ maxWidth: 1040, margin: "0 auto" }}>© {new Date().getFullYear()} VERDE HEALTH</div>
+
+        <footer className="container py-10 text-slate-600">
+          <div className="border-t border-slate-200 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} VERDE HEALTH</p>
+            <div className="text-sm">
+              <a className="hover:underline" href="/legal/privacy">Политика за поверителност</a>
+              <span className="mx-2">·</span>
+              <a className="hover:underline" href="/legal/terms">Условия за ползване</a>
+            </div>
+          </div>
         </footer>
       </body>
     </html>
